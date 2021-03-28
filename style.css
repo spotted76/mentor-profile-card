@@ -50,16 +50,16 @@ main {
 
 /* Layout for the main center card */
 #primary-card {
-    width: 350px;
-    height: 300px;
-    border: 3px solid black;
+    width: 340px;
+    height: 360px;
+    border: 0;
     background-color: white;
     z-index: 2;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
     background-image: url("./images/bg-pattern-card.svg");
-    background-size: 100% 50%;
+    background-size: 100% 120;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -68,8 +68,8 @@ main {
 
 /* Cuts the primary-card into 3rds */
 .third {
-    height: 33.33%;
-    border: 2px solid red;
+    height: 90px;
+    border: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,6 +105,31 @@ main {
     font-size: 2rem;
     font-weight: 700;
     color: var(--very-dark-desaturated-blue);
+    margin: 0;
+}
+
+#statistics {
+    border-top: 1px solid var(--dark-grayish-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    line-height: 2.5rem;
+}
+
+#statistics p:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+    text-align: center;
+    margin: 0;
+}
+
+#statistics p:last-child {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+    text-align: center;
     margin: 0;
 }
 
