@@ -7,7 +7,13 @@
     --dark-grayish-blue: hsl(227, 10%, 46%);
 }
 
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+}
 
 .attribution { 
     font-size: 11px; 
@@ -25,28 +31,34 @@ main {
 
 }
 
+/* Overall main visible content */
 #content {
     width: 100%;
     height: 100%;
     position: relative;
     overflow:hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Positioning for the background image divs */
-#top-bg {
+/* Use psuedo selectors to handle top-left / bottom-right images */
+
+#content::before {
+    content: url("./images/bg-pattern-top.svg");
     position: absolute;
     bottom: 50%;
     left: -25%;
 }
 
-#bottom-bg {
+#content::after {
+    content: url("./images/bg-pattern-bottom.svg");
     position: absolute;
     top: 50%;
     right: -25%;
 }
+
 
 /* Layout for the main center card */
 #primary-card {
@@ -59,15 +71,14 @@ main {
     overflow: hidden;
     position: relative;
     background-image: url("./images/bg-pattern-card.svg");
-    background-size: 100% 120;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-/* Cuts the primary-card into 3rds */
-.third {
+/* Cuts the primary-card into 4ths */
+.quarter {
     height: 90px;
     border: 0;
     display: flex;
@@ -133,21 +144,4 @@ main {
     margin: 0;
 }
 
-/* #primary-card::before {
-    content: "";
-    height: 50%;
-    width: 100%;
-    background: url("./images/bg-pattern-card.svg");
-    position: absolute;
-
-} */
-
-/* #top-half {
-    height: 50%;
-    width: 100%;
-}
-
-#bottom-half {
-    height: 50%;
-} */
 
